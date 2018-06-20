@@ -13,5 +13,22 @@ public class Game {
         System.out.println(players);
         Submarine ESET = new Submarine(players);
 
+        System.out.println("Let's the battle begin! ");
+        for(int c=0; c<players;c++) {
+
+            System.out.println(ESET.Participents[c].name + "'s move!");
+            int bones= ESET.Participents[c].dropBones();
+            ESET.gameWay(bones,c);
+
+            for(int i=0 ; i<4; i++)
+                for (int j=0; j<8; j++)
+                {
+
+                }
+
+
+
+        }
+
     }
 }

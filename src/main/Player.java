@@ -3,17 +3,20 @@ import java.util.Random;
 
 public class Player {
     static String name;
+    static int bones;
+    public static int currentPosition;
 
-    static int currentPosition;
-
-    int dropBones(){
-
+    int dropBones()
+    {
         Random rand = new Random();
-        int  i = rand.nextInt(6)+1;
-        return i; }
-    int move (int currentPosition){
+        int  i = rand.nextInt(6)+2;
+        bones=i;
+        return i;
+    }
 
-
-        return 2;}
+        int move (int currentPosition)
+    {
+        return currentPosition+dropBones();
+    }
 
 }
