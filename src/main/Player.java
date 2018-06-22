@@ -5,6 +5,7 @@ public class Player {
     static String name;
     static int bones;
     public static int currentPosition;
+    static boolean decision;
 
     int dropBones()
     {
@@ -14,9 +15,6 @@ public class Player {
         return i;
     }
 
-        int move (int currentPosition)
-    {
-        return currentPosition+dropBones();
-    }
+
 
 }

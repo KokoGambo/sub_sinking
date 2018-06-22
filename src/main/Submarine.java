@@ -8,10 +8,39 @@ public class Submarine {
     static int waterWayDown [][] = new int [4][8];
 
 
-    void gameWay(int s, int i)
+    void gameWayDown(int s, int i, int p)
     {
-       int move=Participents[i].currentPosition + s;
+       int move;
+       Participents[i].currentPosition+=s;
 
+       for(int q=0; q<p;q++) {
+           if (q==i) continue;
+           if (Participents[i].currentPosition ==Participents[q].currentPosition)
+               Participents[i].currentPosition++;
+       }
+
+       move=Participents[i].currentPosition;
+       int treasure=waterWayDown [move/8][move%8];
+
+       String temp=in.nextLine();
+       if (temp=="Pick")
+       {
+            Participents[i].decision=true;
+            waterWayDown [move/8][move%8]=100;
+       }
+       else  waterWayDown [move/8][move%8]=1;
+
+
+
+
+       for (int index = move/8; index<4;index++)
+       {
+                for (int j=)
+                {
+
+
+                }
+       }
 
 
     }

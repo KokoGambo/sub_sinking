@@ -18,7 +18,7 @@ public class Game {
 
             System.out.println(ESET.Participents[c].name + "'s move!");
             int bones= ESET.Participents[c].dropBones();
-            ESET.gameWay(bones,c);
+            ESET.gameWayDown(bones,c,players);
 
             for(int i=0 ; i<4; i++)
                 for (int j=0; j<8; j++)
