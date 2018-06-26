@@ -1,16 +1,18 @@
 package main;
+import java.util.ArrayList;
 import java.util.Random;
+import java.util.List;
 
 public class Player {
-    static String name;
-    static int bones;
-    public static int currentPosition;
-    static boolean decision;
-
-    int dropBones()
+    String name = new String();
+     int bones;
+    public int currentPosition;
+    boolean decision;
+    ArrayList<Integer> myTreasure= new ArrayList<>();
+     int dropBones()
     {
         Random rand = new Random();
-        int  i = rand.nextInt(6)+2;
+        int  i = rand.nextInt(5)+2;
         bones=i;
         return i;
     }
